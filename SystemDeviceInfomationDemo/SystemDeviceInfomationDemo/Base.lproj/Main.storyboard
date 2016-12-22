@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,167 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDI-jT-Uhi">
+                                <rect key="frame" x="25" y="30" width="325" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ain-Z2-EZo"/>
+                                </constraints>
+                                <state key="normal" title="获取电池电量">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.26274509800000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="batteryQuantityButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TsA-gv-URH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyy-SR-9gb">
+                                <rect key="frame" x="25" y="80" width="325" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CeW-2u-5nx"/>
+                                </constraints>
+                                <state key="normal" title="获取电池状态">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.26274509800000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="batteryStatusButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="quS-sA-Qvg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUp-aQ-Jci">
+                                <rect key="frame" x="25" y="130" width="325" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qkZ-sE-lMd"/>
+                                </constraints>
+                                <state key="normal" title="获取总内存大小">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.26274509800000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="totalMemorySizeButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wbh-Mv-Wbk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPw-6F-lWe">
+                                <rect key="frame" x="25" y="180" width="325" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zBx-gb-m6O"/>
+                                </constraints>
+                                <state key="normal" title="获取当前可用内存">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.26274509800000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="availableMemorySizeButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kkc-4T-1SV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bA-ol-VIo">
+                                <rect key="frame" x="25" y="230" width="325" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nuR-Sw-uV8"/>
+                                </constraints>
+                                <state key="normal" title="获取已使用内存">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.26274509800000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="usedMemoryButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bea-Wr-MpW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ5-OB-a3v">
+                                <rect key="frame" x="25" y="280" width="325" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Rvt-Od-Vqo"/>
+                                </constraints>
+                                <state key="normal" title="获取总磁盘容量">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.26274509800000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="totalDiskSizeButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f7x-AQ-1z7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxe-tt-aTh">
+                                <rect key="frame" x="25" y="330" width="325" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="B7H-zM-fhb"/>
+                                </constraints>
+                                <state key="normal" title="获取可用磁盘容量">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.26274509800000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="availableDiskSizeButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ElC-ni-AoZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5h3-wl-kvk">
+                                <rect key="frame" x="25" y="380" width="325" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bAw-Br-orS"/>
+                                </constraints>
+                                <state key="normal" title="获取设备型号">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.26274509800000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="currentDeviceTypeButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eRt-W2-bEf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXS-ez-FLx">
+                                <rect key="frame" x="25" y="430" width="325" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="j81-29-LAX"/>
+                                </constraints>
+                                <state key="normal" title="获取IP地址">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.26274509800000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deviceIdAddressButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dn7-eA-nKH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWM-tv-BT4">
+                                <rect key="frame" x="25" y="480" width="325" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="K7d-DW-bDx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="获取手机链接WIFI名称">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.26274509800000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="phoneWifiNameButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bvo-o9-Op8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oPw-6F-lWe" firstAttribute="top" secondItem="CUp-aQ-Jci" secondAttribute="bottom" constant="10" id="0F2-8T-Zci"/>
+                            <constraint firstItem="5h3-wl-kvk" firstAttribute="width" secondItem="Dxe-tt-aTh" secondAttribute="width" id="0gL-ra-9XO"/>
+                            <constraint firstItem="Hyy-SR-9gb" firstAttribute="width" secondItem="tDI-jT-Uhi" secondAttribute="width" id="2xf-Rg-lmQ"/>
+                            <constraint firstItem="iWM-tv-BT4" firstAttribute="top" secondItem="kXS-ez-FLx" secondAttribute="bottom" constant="10" id="4yg-Nv-O6e"/>
+                            <constraint firstItem="Hyy-SR-9gb" firstAttribute="top" secondItem="tDI-jT-Uhi" secondAttribute="bottom" constant="10" id="7IL-Nc-ve2"/>
+                            <constraint firstItem="iWM-tv-BT4" firstAttribute="centerX" secondItem="kXS-ez-FLx" secondAttribute="centerX" id="ALv-Oh-wNH"/>
+                            <constraint firstItem="kXS-ez-FLx" firstAttribute="top" secondItem="5h3-wl-kvk" secondAttribute="bottom" constant="10" id="BM1-MG-bDE"/>
+                            <constraint firstItem="kXS-ez-FLx" firstAttribute="centerX" secondItem="5h3-wl-kvk" secondAttribute="centerX" id="Ei6-xO-Ie5"/>
+                            <constraint firstItem="uQ5-OB-a3v" firstAttribute="centerX" secondItem="6bA-ol-VIo" secondAttribute="centerX" id="G1V-6W-BS0"/>
+                            <constraint firstItem="Hyy-SR-9gb" firstAttribute="centerX" secondItem="tDI-jT-Uhi" secondAttribute="centerX" id="Hq9-TE-2SX"/>
+                            <constraint firstItem="CUp-aQ-Jci" firstAttribute="width" secondItem="Hyy-SR-9gb" secondAttribute="width" id="IuI-52-bxp"/>
+                            <constraint firstItem="kXS-ez-FLx" firstAttribute="width" secondItem="5h3-wl-kvk" secondAttribute="width" id="J3c-vv-rF6"/>
+                            <constraint firstItem="oPw-6F-lWe" firstAttribute="centerX" secondItem="CUp-aQ-Jci" secondAttribute="centerX" id="KF7-bP-XZr"/>
+                            <constraint firstAttribute="trailing" secondItem="tDI-jT-Uhi" secondAttribute="trailing" constant="25" id="MzP-zd-XwU"/>
+                            <constraint firstItem="6bA-ol-VIo" firstAttribute="width" secondItem="oPw-6F-lWe" secondAttribute="width" id="SQx-Kt-v1L"/>
+                            <constraint firstItem="6bA-ol-VIo" firstAttribute="centerX" secondItem="oPw-6F-lWe" secondAttribute="centerX" id="Ujf-CJ-yGq"/>
+                            <constraint firstItem="5h3-wl-kvk" firstAttribute="top" secondItem="Dxe-tt-aTh" secondAttribute="bottom" constant="10" id="ZBj-xI-IHu"/>
+                            <constraint firstItem="Dxe-tt-aTh" firstAttribute="top" secondItem="uQ5-OB-a3v" secondAttribute="bottom" constant="10" id="bqT-LS-pRR"/>
+                            <constraint firstItem="tDI-jT-Uhi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="cF1-It-JhT"/>
+                            <constraint firstItem="Dxe-tt-aTh" firstAttribute="centerX" secondItem="uQ5-OB-a3v" secondAttribute="centerX" id="dJ6-g7-DKa"/>
+                            <constraint firstItem="iWM-tv-BT4" firstAttribute="width" secondItem="kXS-ez-FLx" secondAttribute="width" id="iHo-uT-z3D"/>
+                            <constraint firstItem="uQ5-OB-a3v" firstAttribute="top" secondItem="6bA-ol-VIo" secondAttribute="bottom" constant="10" id="jRj-vM-rWU"/>
+                            <constraint firstItem="oPw-6F-lWe" firstAttribute="width" secondItem="CUp-aQ-Jci" secondAttribute="width" id="jiv-cw-wFV"/>
+                            <constraint firstItem="6bA-ol-VIo" firstAttribute="top" secondItem="oPw-6F-lWe" secondAttribute="bottom" constant="10" id="m3h-mK-4U6"/>
+                            <constraint firstItem="tDI-jT-Uhi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="nJn-mD-Eve"/>
+                            <constraint firstItem="CUp-aQ-Jci" firstAttribute="centerX" secondItem="Hyy-SR-9gb" secondAttribute="centerX" id="qEC-5P-jKZ"/>
+                            <constraint firstItem="5h3-wl-kvk" firstAttribute="centerX" secondItem="Dxe-tt-aTh" secondAttribute="centerX" id="qR3-ej-w63"/>
+                            <constraint firstItem="Dxe-tt-aTh" firstAttribute="width" secondItem="uQ5-OB-a3v" secondAttribute="width" id="vlD-gy-j9Y"/>
+                            <constraint firstItem="uQ5-OB-a3v" firstAttribute="width" secondItem="6bA-ol-VIo" secondAttribute="width" id="wKa-WA-hYb"/>
+                            <constraint firstItem="CUp-aQ-Jci" firstAttribute="top" secondItem="Hyy-SR-9gb" secondAttribute="bottom" constant="10" id="zxS-1A-uQe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
